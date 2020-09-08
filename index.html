@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+    <title>Javascript Exercises - beginner to intermediate</title>
+</head>
+<body>
+
+    <header>
+		<div class="logo">JS</div>
+		<div class="header-content">JavaScript Exercises</div>
+	</header>
+
+	<section id="main">
+		<div id="sidebar">
+			<ul>
+				<li>
+					<a href="#basic">Basic</a>
+					<ul>
+						<li><a href="#basic_1">Exercise 1</a></li>
+						<li><a href="#basic_2">Exercise 2</a></li>
+						<li><a href="#basic_3">Exercise 3</a></li>
+						<li><a href="#basic_4">Exercise 4</a></li>
+						<li><a href="#basic_5">Exercise 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="main-content">
+
+			<h1>JavaScript Exercises</h1>
+
+			<p>Repository of Javascript exercises that I have collected &amp; created with the intention of adding exercises for beginners to intermediate level to help newcomers to the Javascript language.</p>
+
+
+
+			<p>&nbsp;</p>
+
+			<h3 id="basic">Basic</h3>
+
+			<p>Collection of basic JavaScript exercises for beginner:</p>
+
+			<hr>
+
+			<h4 id="basic_1"><a href="./exercises/basic/index_1.html" target="_blank">&topfork; Exercise 1</a></h4>
+
+			<p>Write a JavaScript program to display the current day and time in the following format:</p>
+
+			<p class="example">Today is Monday, the current time is 10 PM : 30m : 38s.</p>
+
+			<div id="solution">
+				<h5 class="js-toggle-solution">&DownArrowBar; Show solution</h5>
+				<div class="solution" style="display: none;">
+					<div class="codepen" data-prefill='{"title": "JavaScript exercises - Basic 1","description": "Exercise 1 of the Basic JavaScript exercises","tags": ["js", "javascript"],"scripts": ["https://codepen.io/nullobject/pen/cngzI"]}' style="height: 400px; overflow: auto;" data-height="400" data-default-tab="js,result" data-editable="true">
+						<pre data-lang="scss">
+body {
+	background: black;
+	color: white;
+}
+
+pre code {
+	font: 11pt/1.25 Monaco, monospace;
+}
+
+.debug { color: Snow; }
+.info  { color: LawnGreen; }
+.warn  { color: GoldenRod; }
+.error { color: LightCoral; }
+						</pre>
+						<pre data-lang="js">
+let weekDaysArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; // Array containing the days of the week where 0 = Sunday
+let date = new Date(); // creates a new date object with current date
+let weekDay = weekDaysArr[date.getDay()]; // get the current weekday from the array based on its numerical value
+let hours = date.getHours(); // gets current hour from the date object
+// convert the hours from 25h to 12h
+if ( hours >= 12 && hours < 24 ) {
+	hours = hours + 'pm';
+} else {
+	hours = hours + 'am';
+}
+let minutes = date.getMinutes(); // get the current minutes from the date object
+let seconds = date.getSeconds(); // get the current seconds from the date object
+
+// outputs all the values
+console.log(`Today is ${weekDay}, the current time is ${hours} : ${minutes}m : ${seconds}s.`);
+						</pre>
+					</div>
+
+					<p><b>Explanation:</b></p>
+
+					<p></p>
+
+				</div>
+			</div>
+
+			<hr>
+
+			<h4 id="basic_2"><a href="./exercises/basic/index_2.html" target="_blank">&topfork; Exercise 2</a></h4>
+
+			<p>Write a JavaScript program to rotate the string 'jsIsAwesome', by periodically removing one letter from the end of the string and attaching it to the front. (right to left)</p>
+
+			<hr>
+
+			<h4 id="basic_3"><a href="./exercises/basic/index_3.html" target="_blank">&topfork; Exercise 3</a></h4>
+
+			<p>Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to guess the number picked.<br>If the user input matches with guess number, the program will display a message "Great, you guessed it" otherwise display a message "Better luck next time".</p>
+
+			<hr>
+
+			<h4 id="basic_4"><a href="./exercises/basic/index_4.html" target="_blank">&topfork; Exercise 4</a></h4>
+
+			<p>Write a JavaScript program to display the days left until next Christmas in the following format:</p>
+
+			<p class="example">Santa will deliver your presents in 89 days!</p>
+
+			<hr>
+
+			<h4 id="basic_5"><a href="./exercises/basic/index_5.html" target="_blank">&topfork; Exercise 5</a></h4>
+
+			<p>Write a JavaScript program to convert miles from a user input into kilometers, knowing that:</p>
+
+			<p class="example">1mile = 1.60934km</p>
+
+		</div>
+	</section>
+
+	<footer>
+		<p>&copy; <span id="footer-date">2020</span>, created with ♥ by <a href="https://www.marioduarte.co.uk/" target="_blank" rel=”noreferrer noopener”>Mario Duarte</a> to the dev community.</p>
+	</footer>
+
+	<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+	<script src="./js/app.js" type="text/javascript"></script>
+</body>
+</html>
