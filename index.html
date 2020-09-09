@@ -106,6 +106,48 @@ console.log(`Today is ${weekDay}, the current time is ${hours} : ${minutes}m : $
 
 			<p>Write a JavaScript program to rotate the string 'jsIsAwesome', by periodically removing one letter from the end of the string and attaching it to the front. (right to left)</p>
 
+			<div id="solution">
+				<h5 class="js-toggle-solution">&DownArrowBar; Show solution</h5>
+				<div class="solution" style="display: none;">
+					<div class="codepen" data-prefill='{"title": "JavaScript exercises - Basic 2","description": "Exercise 2 of the Basic JavaScript exercises","tags": ["js", "javascript"],"scripts": ["https://codepen.io/nullobject/pen/cngzI"]}' style="height: 400px; overflow: auto;" data-height="400" data-default-tab="js,result" data-editable="true">
+						<pre data-lang="html">
+							&lt;h1 id="string"&gt;&lt;/h1&gt;
+						</pre>
+						<pre data-lang="scss">
+body {
+	background: black;
+	color: white;
+}
+
+pre code {
+	font: 11pt/1.25 Monaco, monospace;
+}
+
+.debug { color: Snow; }
+.info  { color: LawnGreen; }
+.warn  { color: GoldenRod; }
+.error { color: LightCoral; }
+						</pre>
+						<pre data-lang="js">
+// The string to be rotated
+let str = 'jsIsAwesome';
+let container = document.getElementById('string');
+
+setInterval(()=>{
+	str = (str.slice(-1) + str); // Adds the last char of the string to the front
+	str = str.slice(0,-1); // removes the last char of the string
+	container.innerHTML = str;
+}, 100);
+						</pre>
+					</div>
+
+					<p><b>Explanation:</b></p>
+
+					<p></p>
+
+				</div>
+			</div>
+
 			<hr>
 
 			<h4 id="basic_3"><a href="./exercises/basic/index_3.html" target="_blank">&topfork; Exercise 3</a></h4>
