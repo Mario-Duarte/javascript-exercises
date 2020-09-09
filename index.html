@@ -75,10 +75,15 @@ let date = new Date(); // creates a new date object with current date
 let weekDay = weekDaysArr[date.getDay()]; // get the current weekday from the array based on its numerical value
 let hours = date.getHours(); // gets current hour from the date object
 // convert the hours from 25h to 12h
-if ( hours >= 12 && hours < 24 ) {
-	hours = hours + 'pm';
-} else {
-	hours = hours + 'am';
+switch (true) {
+	case hours >= 12 && hours < 24:
+		hours = (hours - 12) + 'pm';
+	break;
+	case hours == 0:
+		hours = (hours + 12) + 'am';
+	break;
+	default:
+		hours = hours + 'am';
 }
 let minutes = date.getMinutes(); // get the current minutes from the date object
 let seconds = date.getSeconds(); // get the current seconds from the date object
