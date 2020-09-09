@@ -60,6 +60,7 @@ hr {
 	background-image: none;
 	background-image: linear-gradient(to right, #fdcb6e, #eee);
 	border: none;
+	margin-top: 60px;
 }
 
 a {
@@ -76,6 +77,15 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.explanation {
+	position: relative;
+	width: 100%;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 40px auto;
 }
 
 header {
