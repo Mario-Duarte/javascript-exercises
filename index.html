@@ -162,6 +162,56 @@ setInterval(()=>{
 
 			<p>Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to guess the number picked.<br>If the user input matches with guess number, the program will display a message "Great, you guessed it" otherwise display a message "Better luck next time".</p>
 
+			<div id="solution">
+				<h5 class="js-toggle-solution">&DownArrowBar; Show solution</h5>
+				<div class="solution" style="display: none;">
+					<div class="codepen" data-prefill='{"title": "JavaScript exercises - Basic 3","description": "Exercise 3 of the Basic JavaScript exercises","tags": ["js", "javascript"],"scripts": ["https://codepen.io/nullobject/pen/cngzI"]}' style="height: 400px; overflow: auto;" data-height="400" data-default-tab="js,result" data-editable="true">
+						<pre data-lang="html">
+&lt;button id="play"&gt;Play&lt;/button&gt;
+						</pre>
+						<pre data-lang="scss">
+	body {
+	background: black;
+	color: white;
+	}
+
+	pre code {
+	font: 11pt/1.25 Monaco, monospace;
+	}
+
+	.debug { color: Snow; }
+	.info  { color: LawnGreen; }
+	.warn  { color: GoldenRod; }
+	.error { color: LightCoral; }
+						</pre>
+						<pre data-lang="js">
+function prontUser() {
+	let reply;
+	let rndNumber = Math.floor(Math.random() * (10 - 1) + 1);
+	let userNumber = prompt('Gess the number, from 1 to 10.', '0');
+	if ( userNumber == rndNumber ) {
+		reply = "Great, you guessed it";
+	} else {
+		reply = "Better luck next time, correct number was " + rndNumber;
+	}
+	if (confirm(reply)) {
+		prontUser();
+	}
+}
+
+document.getElementById('play').addEventListener("click", prontUser);
+						</pre>
+					</div>
+
+					<div class="explanation">
+						<p><b>Explanation:</b></p>
+
+						<p></p>
+					</div>
+
+				</div>
+			</div>
+
 			<hr>
 
 			<h4 id="basic_4"><a href="./exercises/basic/index_4.html" target="_blank">&topfork; Exercise 4</a></h4>
