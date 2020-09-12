@@ -93,11 +93,11 @@ console.log(`Today is ${weekDay}, the current time is ${hours} : ${minutes}m : $
 						</pre>
 					</div>
 
-					<p><b>Explanation:</b></p>
+					<div class="explanation">
+						<p><b>Explanation:</b></p>
 
-					<p></p>
-
-					<p></p>
+						<p></p>
+					</div>
 
 				</div>
 			</div>
@@ -219,6 +219,44 @@ document.getElementById('play').addEventListener("click", prontUser);
 			<p>Write a JavaScript program to display the days left until next Christmas in the following format:</p>
 
 			<p class="example">Santa will deliver your presents in 89 days!</p>
+
+			<div id="solution">
+				<h5 class="js-toggle-solution">&DownArrowBar; Show solution</h5>
+				<div class="solution" style="display: none;">
+					<div class="codepen" data-prefill='{"title": "JavaScript exercises - Basic 4","description": "Exercise 4 of the Basic JavaScript exercises","tags": ["js", "javascript"],"scripts": ["https://codepen.io/nullobject/pen/cngzI"]}' style="height: 400px; overflow: auto;" data-height="400" data-default-tab="js,result" data-editable="true">
+						<pre data-lang="scss">
+body {
+	background: black;
+	color: white;
+}
+
+pre code {
+	font: 11pt/1.25 Monaco, monospace;
+}
+
+.debug { color: Snow; }
+.info  { color: LawnGreen; }
+.warn  { color: GoldenRod; }
+.error { color: LightCoral; }
+						</pre>
+						<pre data-lang="js">
+let today = new Date();
+let thisYear = today.getFullYear();
+let thisCristmas = new Date(thisYear+'-12-25');
+let delta = Math.abs(thisCristmas - today) / 1000;
+let days = Math.floor(delta / 86400);
+console.log(`Santa will deliver your presents in ${days} days!`);
+						</pre>
+					</div>
+
+					<div class="explanation">
+						<p><b>Explanation:</b></p>
+
+						<p></p>
+					</div>
+
+				</div>
+			</div>
 
 			<hr>
 
