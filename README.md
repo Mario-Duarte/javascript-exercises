@@ -1,4 +1,4 @@
-# Javascript Exercises
+# Javascript Exercises - WIP
 
 Repository of Javascript exercises that I have collected &amp; created with the intention of adding exercises for beginners to intermediate level to help newcomers to the Javascript language.
 
